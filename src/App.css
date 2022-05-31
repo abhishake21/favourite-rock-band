@@ -1,38 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+
 .App {
   text-align: center;
+  font-family: "Poppins", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1,h2 {
+  padding: 0;
+  margin: 0;
+}
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: white;
+  padding: 0;
+  margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+header {
+  background: rgb(220, 46, 46);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.heading {
+  font-size: 3rem;
+  padding: 0.5rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.band-name-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 0 1rem 1rem 1rem;
+  font-size: 1.2rem;
+}
+.band-name {
+  border-radius: 0.5rem;
+  padding: 0.5rem 2rem;
+  background-color: rgba(255, 255, 255, 0.226);
+}
+.band-name:hover {
+  background-color: rgba(0, 0, 0, 0.607);
+  cursor: pointer;
+}
+
+.divider {
+  padding: 1px;
+  background-color: white;
+}
+.para {
+  margin-top: 1rem;
+  padding: 0 0.5rem;
+  font-weight: 500;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 1rem;
+}
+
+.song-info {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+.song-image {
+  width: 250px;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+.song-name {
+  padding: 0.5rem 0;
+  margin-top: 0.3rem;
+  background-color: rgb(58, 58, 58);
+  font-size: 1.3rem;
+}
+
+@media (max-width:882px) {
+  .band-name-list {
+    gap: 0.8rem;
   }
-  to {
-    transform: rotate(360deg);
+  .band-name {
+    padding: 0.3rem 0.5rem;
+  }
+  .song-image {
+    width: 220px;
+  }
+}
+
+@media (max-width:680px) {
+  .band-name-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width:484px) {
+  .para {
+    font-size: 1.2rem;
+  }
+  .heading {
+    font-size: 2.5rem;
+  }
+  .song-image {
+    width: 200px;
+  }
+}
+
+@media (max-width:377px) {
+  .heading {
+    font-size: 2.2rem;
+  }
+  .band-name {
+    font-size: 1rem;
   }
 }
