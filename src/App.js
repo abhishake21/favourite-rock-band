@@ -67,7 +67,7 @@ const rockBandsList = {
     },
     {
       Name: "Spirit",
-      Image: "https://i.scdn.co/image/ab67616d00001e02be2c7a89ec04c4bb50d26a08",
+      Image: "https://raw.githubusercontent.com/abhishake21/Project-images/main/spirit.jpg",
       Youtube: "https://www.youtube.com/watch?v=psTtPoCdRcA"
     }
   ]
