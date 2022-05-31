@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 
+// Rockband Database Object
 const rockBandsList = {
   "Royal Blood": [
     {
@@ -75,22 +76,29 @@ const rockBandsList = {
 function App() {
   const [bandName, setBandName] = useState("Royal Blood");
 
+  // Click function for Bandnames
   function artistClickHandler(bandName) {
     setBandName(bandName);
   }
   
   return (
     <div className="App">
+      {/* Header and Navbar */}
       <header>
         <h1 className='heading'>🤘 Rock Bands 🤘</h1>
         <nav className='band-name-list'>
+          {/* Converting Object-keys to Bandname array */}
           {Object.keys(rockBandsList).map(bandName => 
             <li key={bandName} className="band-name" onClick={()=> artistClickHandler(bandName)}>{bandName}</li>
           )}
         </nav>
       </header>
+
+      {/* Divider and Para */}
       <div className='divider'></div>
       <h2 className='para'>Click on the image to listen the song</h2>
+
+      {/* Displaying Songs */}
       <main className='container'>
         {rockBandsList[bandName].map(song => 
           <a className='song-info' key={song.Number} href={song.Youtube} target="_blank">
